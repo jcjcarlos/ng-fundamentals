@@ -3,9 +3,9 @@ import { Component } from "@angular/core";
 @Component({
     selector: 'events-list',
     templateUrl: './events-list.component.html'
-}) 
+})
 export class EventsListComponent {
-   eventFromList = {
+    eventFromList = {
         id: 1,
         name: 'Angular Connect',
         date: '9/26/2036',
@@ -13,13 +13,13 @@ export class EventsListComponent {
         price: 599.99,
         imageUrl: '/assets/images/angularconnect-shield.png',
         location: {
-            address:'1057 DT',
+            address: '1057 DT',
             city: 'London',
             country: 'England'
         }
     }
 
-    handleEventClicked(event){
-        console.log(`Event received by EventThumbnail: ${JSON.stringify(event)}`);
+    handleTemplate(data:any){
+        console.log(JSON.stringify(data));
     }
 }
