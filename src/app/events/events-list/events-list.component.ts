@@ -2,14 +2,10 @@ import { Component } from "@angular/core";
 
 @Component({
     selector: 'events-list',
-    template: `
-        <div>
-            <h1>Upcoming Angular Events</h1>
-        </div>
-    `
+    templateUrl: './events-list.component.html'
 }) 
 export class EventsListComponent {
-    event = {
+   eventFromList = {
         id: 1,
         name: 'Angular Connect',
         date: '9/26/2036',
@@ -19,7 +15,11 @@ export class EventsListComponent {
         location: {
             address:'1057 DT',
             city: 'London',
-            contry: 'Englad'
+            country: 'England'
         }
+    }
+
+    handleEventClicked(event){
+        console.log(`Event received by EventThumbnail: ${JSON.stringify(event)}`);
     }
 }
